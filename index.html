@@ -76,7 +76,7 @@
       font-weight: 500;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--black);
+      color: var(--white);
       text-decoration: none;
       position: relative;
     }
@@ -940,21 +940,6 @@
     }, { threshold: 0.12 });
     reveals.forEach(el => observer.observe(el));
 
-    // Nav background on scroll
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        nav.style.background = 'rgba(13,13,13,0.9)';
-        nav.style.backdropFilter = 'blur(12px)';
-        nav.style.mixBlendMode = 'normal';
-        nav.querySelectorAll('a').forEach(a => a.style.color = '#F9F7F0');
-      } else {
-        nav.style.background = '';
-        nav.style.backdropFilter = '';
-        nav.style.mixBlendMode = 'multiply';
-        nav.querySelectorAll('a').forEach(a => a.style.color = '');
-      }
-    });
   </script>
 </body>
 </html>
